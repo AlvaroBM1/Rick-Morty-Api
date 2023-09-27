@@ -98,6 +98,17 @@ export class HomeComponent implements OnInit {
         } else {
           this.characters = [];
         }
-      });
+      },
+      (error: any) => {
+        if (error.status === 404) {
+          // Aquí puedes manejar la situación en la que no se encontraron resultados.
+          this.characters = [];
+          console.error('No se encontraron personajes con ese nombre.');
+        } else {
+          // Manejar otros errores de la solicitud HTTP si es necesario.
+          console.error('Error en la solicitud HTTP:', error);
+        }
+      }
+    );
   }
 }
