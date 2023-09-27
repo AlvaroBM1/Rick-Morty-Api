@@ -1,0 +1,51 @@
+<div class="card-container m-2">
+  <div class="center-card">
+    <p-card [style]="{ 'width': '100%' }">
+      <div class="card-content">
+        <div class="img-container">
+
+<p-image [src]="character.image" alt="{{ character.name }}"></p-image>
+        </div>
+        <h2><strong>{{ character.name }}</strong></h2>
+        <p-table [value]="[character]" [tableStyle]="{ 'min-width': '50rem' }">
+
+          <ng-template pTemplate="body" let-attribute>
+            <tr>
+              <td><strong>Estado:</strong></td>
+              <td>{{ attribute.status }}</td>
+            </tr>
+            <tr>
+              <td><strong>Especie:</strong></td>
+              <td>{{ attribute.species }}</td>
+            </tr>
+            <tr>
+              <td><strong>Género:</strong></td>
+              <td>{{ attribute.gender }}</td>
+            </tr>
+            <tr>
+              <td><strong>Origen:</strong></td>
+              <td>{{ attribute.origin.name }}</td>
+            </tr>
+            <tr>
+              <td><strong>Ubicación:</strong></td>
+              <td>{{ attribute.location.name }}</td>
+            </tr>
+            <tr>
+              <td><strong>Episodios:</strong></td>
+              <td>{{ attribute.episode.length }}</td>
+            </tr>
+            <tr>
+              <td><strong>URL:</strong></td>
+              <td><a [href]="attribute.url" target="_blank">{{ attribute.url }}</a></td>
+            </tr>
+            <tr>
+              <td><strong>Creado:</strong></td>
+              <td>{{ attribute.created | date }}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+        <button pButton type="button" label="Regresar" (click)="goBack()"></button>
+      </div>
+    </p-card>
+  </div>
+</div>
