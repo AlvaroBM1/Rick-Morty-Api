@@ -1,3 +1,99 @@
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
+/* CSS de un personaje */
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.character-info {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: auto;
+  width: 100%;
+}
+
+.character-info img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.character-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.character-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.character-table td:first-child {
+  font-weight: bold;
+  width: 40%;
+}
+
+.character-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.custom-button {
+  background-color: #007bff !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 5px !important;
+  padding: 10px 20px !important;
+  margin-top: 20px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.custom-button:hover {
+  background-color: #0056b3 !important;
+}
+
+/* CSS del listado Home */
+
+.character-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.character-list-card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+}
+
+.character-list-card img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.character-list-card a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.character-list-card a:hover {
+  background-color: #0056b3;
+}
 

@@ -1,11 +1,10 @@
-<h1 class="m-4 bg-yellow">Rick y Morty</h1>
+<h1>Rick y Morty</h1>
 
-<form class="form-inline mb-4 mt-4">
-  <div class="d-flex justify-content-between w-100">
-    <div class="col-6 pr-2">
+<form>
+  <div>
+    <div>
       <input
         type="text"
-        class="form-control w-100"
         [(ngModel)]="name"
         name="name"
         placeholder="Nombre"
@@ -13,9 +12,8 @@
       >
     </div>
 
-    <div class="col-6 pl-2">
+    <div>
       <select id="gender"
-      class="form-select"
       [(ngModel)]="selectedGender"
       name="gender"
       (change)="search(name, selectedGender)">
@@ -33,21 +31,20 @@
 
 
 <div *ngIf="characters.length > 0">
-  <div class="row m-3">
-    <div *ngFor="let character of characters" class="col-md-4 mb-4">
-      <div class="card">
-        <img src="{{ character.image }}" alt="{{ character.name }}" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">{{ character.name }}</h5>
-          <p class="card-text">Status: {{ character.status }}</p>
-          <p class="card-text">Species: {{ character.species }}</p>
-          <p class="card-text">Gender: {{ character.gender }}</p>
-          <!-- Agrega aquí más información si es necesario -->
-          <a [routerLink]="['/character', character.id]" class="btn btn-primary btn-sm">Detalles</a>
-        </div>
+  <div class="character-list">
+    <div *ngFor="let character of characters" class="character-list-card">
+      <img src="{{ character.image }}" alt="{{ character.name }}">
+      <div>
+        <h3><strong>{{ character.name }}</strong></h3>
+        <p>Status: {{ character.status }}</p>
+        <p>Species: {{ character.species }}</p>
+        <p>Gender: {{ character.gender }}</p>
+        <!-- Agrega aquí más información si es necesario -->
+        <a [routerLink]="['/character', character.id]">Detalles</a>
       </div>
     </div>
   </div>
+
 </div>
 
 <div *ngIf="characters.length === 0 && name.trim() !== ''"> No se encontraron resultados</div>
