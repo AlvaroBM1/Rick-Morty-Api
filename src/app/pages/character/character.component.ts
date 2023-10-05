@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Character } from 'src/app/interfaces/character.interface';
+import { Character } from 'src/app/modules/shared/interfaces/character.interface';
 import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({

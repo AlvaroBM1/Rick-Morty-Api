@@ -1,29 +1,28 @@
 <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-    <div>
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" formControlName="name">
-    </div>
-    <div>
-      <label for="status">Status:</label>
-      <select id="status" formControlName="status">
-        <option value="activo">Activo</option>
-        <option value="inactivo">Inactivo</option>
-      </select>
-    </div>
-    <div>
-      <label for="gender">Género:</label>
-      <select id="gender" formControlName="gender">
-        <option value="masculino">Masculino</option>
-        <option value="femenino">Femenino</option>
-      </select>
-    </div>
-    <div>
-      <label for="origin">Origen:</label>
-      <select id="origin" formControlName="origin">
-        <option value="nacional">Nacional</option>
-        <option value="extranjero">Extranjero</option>
-      </select>
-    </div>
-    <button type="submit">Enviar</button>
-  </form>
-  
+  <div>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" formControlName="name">
+  </div>
+  <div>
+    <label for="status">Status:</label>
+    <select id="status" formControlName="status">
+      <option value="activo">Activo</option>
+      <option value="inactivo">Inactivo</option>
+    </select>
+  </div>
+  <div>
+    <label for="gender">Género:</label>
+    <select id="gender" formControlName="gender">
+      <option value="masculino">Masculino</option>
+      <option value="femenino">Femenino</option>
+    </select>
+  </div>
+  <div>
+    <label for="origin">Origen:</label>
+    <select id="origin" formControlName="origin">
+      <option value="nacional">Nacional</option>
+      <option value="extranjero">Extranjero</option>
+    </select>
+  </div>
+  <button type="submit">Enviar</button>
+</form>

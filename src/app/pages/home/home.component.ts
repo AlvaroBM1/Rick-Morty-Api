@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { catchError, debounceTime, of, switchMap } from 'rxjs';
-import { Character } from 'src/app/interfaces/character.interface';
+import { Character } from 'src/app/modules/shared/interfaces/character.interface';
 import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({

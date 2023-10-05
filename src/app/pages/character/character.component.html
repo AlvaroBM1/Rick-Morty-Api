@@ -42,3 +42,28 @@
     <button type="button" class="custom-button" (click)="goBack()">Regresar</button>
   </div>
 </div>
+
+<div>
+  <img src="" alt="">
+    <span>{{ character.id }}</span>
+    <span>Genero</span>
+    <span>Planeta</span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<ng-container *ngIf="expression; else elseTemplate">
+  
+</ng-container>
+<ng-template #elseTemplate>
+  
+</ng-template>
+
+
+<ng-container *ngIf="expression">
+
+
+</ng-container>
